@@ -11,7 +11,6 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -25,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Task Screenshot](./images/order-summary-component-scrshot.png)
 
 ### Links
 
@@ -43,42 +42,23 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I took some time to look at the `background` CSS Property as 1 was wondering how to incorporate both the mobile & desktop patterns provided in the images folder.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I used `background-size: contain` so that the image does not stretch or get cropped, and then set `background-repeat: no-repeat` to avoid tiling. This way, the spaces not covered by a background image are filled with the background-color property which I provided to give the desired outcome.
 
 ```css
-.proud-of-this-css {
-	color: papayawhip;
+body {
+	background-color: var(--pale-blue);
+	background-image: url(./images/pattern-background-mobile.svg);
+	background-size: contain;
+	background-position: top;
+	background-repeat: no-repeat;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-	console.log('🎉');
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Mozilla Docs on background in CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/background) - This helped me to better understand the `background` property in CSS.
 
 ## Author
 
