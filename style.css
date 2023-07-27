@@ -8,39 +8,146 @@
 	--desaturated-blue: hsl(224, 23%, 55%);
 	--dark-blue: hsl(223, 47%, 23%);
 }
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
+
 * {
 	margin: 0;
 }
+
 body {
 	line-height: 1.5;
 	font-size: 16px;
-	-webkit-font-smoothing: antialiased;
+	height: 100vh;
+	background-image: url(./images/pattern-background-mobile.svg);
+	background-size: cover;
+	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Fraunces', serif;
+	font-family: 'Red Hat Display', sans-serif;
 }
+
 img,
-picture,
-video,
-canvas,
 svg {
 	display: block;
 	max-width: 100%;
 }
-input,
-button,
-textarea,
-select {
+
+button {
 	font: inherit;
 }
+
 p,
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
 	overflow-wrap: break-word;
+}
+
+.main {
+	max-width: 21rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Screen Reader heading */
+.main__heading--sr {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.main__image {
+	border-radius: 1rem 1rem 0 0;
+}
+
+.main__article {
+	text-align: center;
+	background-color: #fff;
+	padding: 1.5rem;
+	border-radius: 0 0 1rem 1rem;
+	font-weight: 500;
+}
+
+.article__heading {
+	font-weight: 900;
+	color: var(--dark-blue);
+	padding: 0.5rem;
+}
+
+.article__para {
+	color: var(--desaturated-blue);
+	padding-bottom: 1rem;
+}
+
+.article__section {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 1rem;
+	background-color: var(--very-pale-blue);
+	padding-bottom: 1.5rem;
+}
+
+.section__para--bold {
+	color: var(--dark-blue);
+	font-weight: 900;
+}
+
+.article__para--highlight {
+	text-decoration: underline;
+	color: var(--bright-blue);
+	font-weight: 900;
+}
+
+.article__para--highlight:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.article__text {
+	display: flex;
+	flex-direction: column;
+}
+
+.article__button--submit {
+	border: 0;
+	width: 100%;
+	color: #fff;
+	font-weight: 700;
+	background-color: var(--bright-blue);
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	box-shadow: 0px 10px 10px hsl(225, 100%, 98%);
+	margin-bottom: 1rem;
+}
+
+.article__button--submit:hover {
+	cursor: pointer;
+	background-color: hsla(245, 75%, 52%, 0.7);
+}
+
+.article__button--cancel {
+	border: 0;
+	width: 100%;
+	background-color: #fff;
+	color: var(--desaturated-blue);
+	font-weight: 700;
+}
+
+.article__button--cancel:hover {
+	cursor: pointer;
+	color: var(--dark-blue);
 }
